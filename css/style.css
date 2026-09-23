@@ -1,0 +1,236 @@
+*{
+    box-sizing: border-box;
+    --yellow: #d8c65c;
+    --backg: #0a191e;
+    --green: #4a9878;
+    --white: #f0f0f0;
+}
+a{
+    text-decoration: none;
+    color: var(--white);
+}
+.btn{
+    width: fit-content;
+    border: 1px solid var(--yellow);
+    color: var(--yellow);
+    padding: .5rem;
+    border-radius: 10px;
+    transition:.5s;
+}
+.btn:hover{
+    background-color: var(--yellow);
+    color: var(--backg);
+    font-weight: bold;
+}
+.logo{
+    font-family: "Gugi", sans-serif;
+    color: var(--yellow);
+    font-weight: bold;
+        font-size: 3rem;
+    span{
+        color: var(--green);
+    }
+}
+.main-logo{
+    display: block;
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+body {
+    z-index: 1;
+    font-size: 1rem;
+    font-family: "Quicksand", sans-serif;
+    color: var(--white);
+    /* background-color: var(--backg); */
+}
+
+.landing {
+    padding: 2vw;
+    min-height: 100vh;
+    background-image: url(../media/backg.jpg);
+    background-size: cover;
+    position: relative;
+}
+.landing .main-div{
+    position: relative;
+    z-index: 20;
+}
+.overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--backg);
+    opacity: .95;
+    z-index: 2;
+}
+.welcome{
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 20%);
+    .start{
+        display: block;
+        margin: auto;
+        animation: fadeInFromTop 1s ease-out forwards;
+        animation-delay: 1s;
+    }
+}
+h1{
+    font-family: "Baumans", system-ui;
+    font-size: 3rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    color: var(--white) ;
+    text-align: center;
+    line-height:1.4;
+    animation: fadeInFromTop 1s ease-out forwards;
+    animation-delay: 0.2s;
+    .logo{
+        animation: fadeInFromTop 1s ease-out forwards;
+        animation-delay: 0.4s;
+    }
+    .eissa{
+        font-size: 1rem;
+        animation: fadeInFromTop 1s ease-out forwards;
+        animation-delay: 0.6s;
+    }
+}
+.welcome h1,
+.welcome .eissa,
+.welcome .btn,
+.welcome .logo,
+ .welcome-workout h2,
+ .welcome-workout ul,
+ .done1, .done2
+ {
+  opacity: 0;
+  transform: translateY(-30px);
+}
+
+.welcome-workout li{
+    margin-bottom: 18px;
+}
+@keyframes fadeInFromTop {
+  0% {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* ############################# */
+
+.welcome-workout{
+    margin: 4rem 2rem;
+}
+.welcome-workout h2{
+    font-weight: bold;
+    color: var(--yellow);
+    animation: fadeInFromTop 1s ease-out forwards;
+    animation-delay: 0.2s;
+    /* font-size: 2rem; */
+}
+.welcome-workout ul{
+    animation: fadeInFromTop 1s ease-out forwards;
+    animation-delay: 0.6s;
+}
+.welcome-workout a{
+    font-size: 1.2rem;
+}
+/* Scheds */
+.main-sched{
+    padding:1rem .5rem;
+    option{
+        color: var(--backg);
+    }
+}
+.main-sched .choose-day{
+    position: relative;
+}
+.choose-day i{
+    position: absolute;
+}
+.main-sched #schedDays{
+    border-radius: 8px;
+    border: 1px solid var(--yellow);
+    background-color: transparent;
+    padding: .5rem 2rem;
+    margin: auto;
+    display: block;
+    color: var(--yellow);
+    font-size: 1rem;
+    font-weight: bold;
+    appearance: none;
+}
+.main-sched #schedDays:focus-visible{
+    outline:none;
+}
+.schedule {
+  padding: 1rem .4rem;
+  color: var(--white);
+}
+
+.schedule table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.schedule th,
+.schedule td {
+  padding: 0.6rem .4rem;
+  border-bottom: 1px solid var(--yellow);
+  text-align: center;
+}
+
+.schedule a {
+  color: var(--green);
+  font-weight: bold;
+}
+
+.schedule input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+td{
+    text-transform: capitalize;
+}
+#startc1,#startc2,
+ #startc3, #startc4,
+  #done{
+    margin:1rem auto;
+    display: block;
+}
+.day-content {
+  display: none;
+}
+
+.done1{
+    margin-top: 2rem;
+        font-family: "Baumans", system-ui;
+        font-size: 3rem;
+        font-weight: 300;
+        text-transform: uppercase;
+        color: var(--yellow) ;
+        text-align: center;
+        line-height:1.4;
+        animation: fadeInFromTop 1s ease-out forwards;
+        animation-delay: 0.2s;
+        position: relative;
+        z-index: 20;
+    }
+    .done2{
+        animation: fadeInFromTop 1s ease-out forwards;
+        animation-delay: 0.8s;
+        color: var(--white) ;
+        position: relative;
+        z-index: 21;
+        text-align: center;
+        line-height:1.4;
+        font-size: 2rem;
+        background-color: #111111c4;
+}

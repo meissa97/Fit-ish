@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Baumans&family=Gugi&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <title>Fit-ish</title>
+</head>
+<body>
+
+    <!-- ============================================================
+         SCREEN: HOME  (was index.html)
+    ============================================================ -->
+    <div class="landing" id="screen-home">
+        <div class="main-div">
+            <header>
+                <a href="#/"><span class="logo main-logo">Fit<span>-ish</span></span></a>
+            </header>
+            <div class="welcome">
+                <h1>
+                    Welcome to <br> <span class="logo">Fit<span>-ish</span></span>
+                    <div class="eissa">(by eissa)</div>
+                </h1>
+                <a href="#/workouts" class="btn start">Workout routines</a>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- ============================================================
+         SCREEN: WORKOUTS LIST  (was wrokouts.html)
+         The <ul> below is emptied and rebuilt by js/app.js from the
+         trainingPrograms object — add a program there and it shows
+         up here automatically.
+    ============================================================ -->
+    <div class="landing" id="screen-workouts" style="display:none;">
+        <div class="main-div main-workouts">
+            <header>
+                <a href="#/"><span class="logo main-logo">Fit<span>-ish</span></span></a>
+            </header>
+            <div class="welcome-workout">
+                <h2>Choose your wrokout:</h2>
+                <ul id="workouts-list">
+                    <!-- populated by js/app.js -->
+                </ul>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- ============================================================
+         SCREEN: PROGRAM  (was fl1.html / fl2.html / mb1.html / mb2.html)
+         One reusable screen for ALL programs. js/app.js fills in the
+         title, the day <select>, and the day/finisher <section>s from
+         the trainingPrograms object depending on which program was
+         picked on the workouts screen.
+    ============================================================ -->
+    <div class="landing" id="screen-program" style="display:none;">
+        <div class="main-div">
+            <header>
+                <a href="#/"><span class="logo main-logo">Fit<span>-ish</span></span></a>
+            </header>
+            <div class="main-sched">
+                <h2 id="program-title" class="program-title"></h2>
+                <div class="choose-day">
+                    <select name="days" id="schedDays">
+                        <option value="nod" disabled selected hidden>Please select your day...</option>
+                    </select>
+                </div>
+                <div id="program-body">
+                    <!-- day1 / cday1 / day2 / cday2 ... sections built by js/app.js -->
+                </div>
+            </div>
+        </div>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- ============================================================
+         SCREEN: DONE  (was done.html)
+    ============================================================ -->
+    <div class="landing" id="screen-done" style="display:none;">
+        <div class="main-div">
+            <header>
+                <a href="#/"><span class="logo main-logo">Fit<span>-ish</span></span></a>
+            </header>
+        </div>
+        <div class="done1">
+            👏👏 <br> WELL DONE CHAMP! <br> 👏👏
+        </div>
+        <div class="done2">See you tomorrow <br>👋</div>
+        <div class="overlay"></div>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
